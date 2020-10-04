@@ -8,9 +8,7 @@ const useLocalStorage = (key, initialValue) => {
   const [value, setValue] = useState(() => {
     const jsonValue = localStorage.getItem(prefixedKey);
 
-    if (jsonValue !== null) {
-      return JSON.parse(jsonValue);
-    }
+    if (jsonValue !== null) return JSON.parse(jsonValue);
 
     if (typeof initialValue === "function") {
       return initialValue();
@@ -20,7 +18,7 @@ const useLocalStorage = (key, initialValue) => {
   });
 
   useEffect(() => {
-    localStorage.setitem(prefixedKey, JSON.stringify(value));
+    localStorage.setItem(prefixedKey, JSON.stringify(value));
   }, [prefixedKey, value]);
 
   return [value, setValue];
