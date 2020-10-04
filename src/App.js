@@ -43,15 +43,16 @@ function App() {
           onChange={setJs}
         />
       </div>
-      <div className="pane"></div>
-      <iframe
-        srcDoc={srcDoc}
-        title="output"
-        sandbox="allow-scripts"
-        frameBorder="0"
-        width="100%"
-        height="100%"
-      />
+      <div className="pane">
+        <iframe
+          srcDoc={srcDoc}
+          title="output"
+          sandbox="allow-scripts"
+          frameBorder="0"
+          width="100%"
+          height="100%"
+        />
+      </div>
     </>
   );
 }
