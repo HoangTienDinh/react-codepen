@@ -26,6 +26,7 @@ const Editor = ({ displayName, language, value, onChange }) => {
           lint: true,
           mode: language,
           lineNumbers: true,
+          theme: "material",
         }}
       />
     </div>

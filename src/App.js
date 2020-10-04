@@ -1,10 +1,12 @@
-import React from "react";
-import Editor from './components/Editor'
+import React, { useState } from "react";
+import Editor from "./components/Editor";
 function App() {
+  const [html, setHtml] = useState("");
+
   return (
     <>
       <div className="pane top-pane">
-        <Editor />
+        <Editor language="xml" displayName="HTML" value={html} onChange={setHtml} />
         <Editor />
         <Editor />
       </div>
