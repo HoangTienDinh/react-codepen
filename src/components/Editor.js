@@ -19,7 +19,10 @@ const Editor = ({ displayName, language, value, onChange }) => {
     <div className={`editor-container ${open ? "" : "collapsed"}`}>
       <div className="editor-title">
         {displayName}
-        <button onClick={() => setOpen((prevOpen) => !prevOpen)}>
+        <button
+          className="expand-collapse-btn"
+          onClick={() => setOpen((prevOpen) => !prevOpen)}
+        >
           <FontAwesomeIcon icon={open ? faCompressAlt : faExpandAlt} />
         </button>
       </div>
